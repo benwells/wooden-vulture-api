@@ -1,0 +1,24 @@
+{
+  "name": "wooden-vulture-api",
+  "version": "1.0.0",
+  "description": "RESTful API for the wooden-vulture project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Ben Wells <mrbrwells@gmail.com>",
+  "license": "Proprietary",
+  "dependencies": {
+    "babel": "^5.8.21",
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.4.13"
+  }
+}
