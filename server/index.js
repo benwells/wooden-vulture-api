@@ -14,16 +14,15 @@ app.use(cors({
 	exposedHeaders: ['Link']
 }));
 
-app.use(bodyParser.json({
-	limit : '100kb'
-}));
+app.use(bodyParser.json());
+
 
 // connect to db
 db( λ => {
 
 	// internal middleware
 	app.use(middleware());
-
+	
 	// api router
 	app.use('/api', api());
 

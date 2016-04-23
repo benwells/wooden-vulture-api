@@ -4,8 +4,15 @@ import mongoose from 'mongoose'
 
 // Schema
 var postSchema = new mongoose.Schema({
-    title: String,
+    title: {
+      type:     String,
+      required: true
+    },
     body: String
+},
+//schema options
+{
+  timestamps: true
 });
 
 // Return model
