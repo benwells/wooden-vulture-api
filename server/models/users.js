@@ -20,6 +20,10 @@ let UserSchema = new mongoose.Schema({
     enum: ['Client', 'Manager', 'Admin'],
     default: 'Client'
   }
+},
+// schema options
+{
+  timestamps: true
 });
 
 // Saves the user's password hashed (plain text password storage is not good)
@@ -52,25 +56,6 @@ UserSchema.methods.comparePassword = function(pw, cb) {
     cb(null, isMatch);
   });
 };
-
-
-// // Schema
-// var userSchema = new mongoose.Schema({
-//     email: {
-//       type:     String,
-//       required: true
-//     },
-//     password: {
-//       type: String,
-//       required: true
-//     },
-//     firstName: String,
-//     lastName: String
-// },
-// //schema options
-// {
-//   timestamps: true
-// });
 
 // Return model
 export default mongoose.model('User', UserSchema);
