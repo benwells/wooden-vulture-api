@@ -1,8 +1,9 @@
 import Mongoose from 'mongoose';
+import { database } from '../secret';
 
 export default function(callback) {
 	// connect to a database if needed
-	Mongoose.connect('mongodb://localhost/testdb');
+	Mongoose.connect(database);
 
 	var db = Mongoose.connection;
 

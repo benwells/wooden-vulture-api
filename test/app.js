@@ -1,6 +1,6 @@
-require("babel/register")
-var request = require('supertest');
-var app = require('../server/index.js');
+require("babel/register");
+import request from 'supertest';
+import app from '../server/index.js';
 
 describe('GET /api/', function() {
   it('should return 200 OK', function(done) {
